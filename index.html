@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <h1>CRUD DEMO</h1>
+  <!-- Trigger/Open The Modal layer-->
+  <button id="favoritListBtn">Favorite List</button>
+  <!-- The Modal -->
+  <div id="favoritListModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h5>Your Favorite Movies</h5>
+      <div id="favoriteMovieList">Some text in the Modal..</div>
+    </div>
+
+  </div>
+
+  <!-- add new movies -->
+  <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+    <label for="add-name" id="add-name-label">Add new to your list</label>
+    <input type="text" id="add-name" placeholder="Write your input here">
+    <input type="submit" value="Submit">
+  </form>
+<!-- edit movies's name -->
+  <div id="spoiler" role="aria-hidden">
+    <form action="javascript:void(0);" method="POST" id="saveEdit">
+      <input type="text" id="edit-name">
+      <input type="submit" value="Commit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+    </form>
+  </div>
+<!-- show total of movies' number -->
+  <p id="counter"></p>
+<!-- show movies' name row by row -->
+  <table>
+    <tr>
+      <th>List</th>
+    </tr>
+    <tbody id="movies">
+    </tbody>
+  </table>
+
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
