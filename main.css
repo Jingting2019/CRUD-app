@@ -12,6 +12,11 @@ button,
   display: block;
 }
 
+/* The normal movie color is black*/
+.normal-color-blue {
+  color: black;
+}
+
 /* The favorite movie color is blue*/
 .favorite-color-blue {
   color: blue;

@@ -77,7 +77,7 @@ let app = new function() {
         data += '<tr>';
         if(this.moviesInfo[i].movieFlag){
           data += '<td id="' + i + '" class="favorite-color-blue" onclick="app.toggleFavorite(' + i + ')">' + this.moviesInfo[i].movieName + '</td>';
-        } else {data += '<td onclick="app.toggleFavorite(' + i + ')">' + this.moviesInfo[i].movieName + '</td>';}
+        } else {data += '<td id="' + i + '" class="normal-color-black" onclick="app.toggleFavorite(' + i + ')">' + this.moviesInfo[i].movieName + '</td>';}
 
         data += '<td><button onclick="app.Edit(' + i + ')">Edit</button></td>';
         data += '<td><button onclick="app.Delete(' + i + ')">Delete</button></td>';
@@ -128,7 +128,7 @@ let app = new function() {
         self.moviesInfo[item].movieName = movieName.trim();
         // Display the new list
         //sort data array
-        this.moviesInfo.sort(this.compareByName);
+        self.moviesInfo.sort(this.compareByName);
         self.FetchAll();
         // Hide fields
         CloseInput();
